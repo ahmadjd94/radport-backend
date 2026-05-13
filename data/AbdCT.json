@@ -1,0 +1,1795 @@
+{
+  "flow_type": "ABDO_CT",
+  "label": "Abdomen and Pelvis CT Systematic Review",
+  "version": 1,
+  "is_active": true,
+  "structure": {
+    "sections": {
+
+      "LC": {
+        "section_id": "LC",
+        "section_label": "Lower chest",
+        "section_note_placeholder": "Optional notes for Lower chest",
+        "normal_template": "Lung bases are clear. No pleural or pericardial effusion. No suspicious pulmonary nodule.",
+        "groups": [
+          {
+            "group_name": "Lung bases",
+            "items": [
+              {
+                "item_id": "LC_0_0",
+                "item_text": "Lung bases",
+                "type": "single_select",
+                "required": true,
+                "options": ["Clear", "Atelectasis", "Consolidation", "Ground-glass opacity", "Nodule(s)", "Mass", "Difficult to assess"]
+              },
+              {
+                "item_id": "LC_0_1",
+                "item_text": "Visible airways",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Mucus plugging", "Bronchial wall thickening", "Difficult to assess"]
+              }
+            ]
+          },
+          {
+            "group_name": "Pleura and pericardium",
+            "items": [
+              {
+                "item_id": "LC_1_0",
+                "item_text": "Pleural effusion",
+                "type": "single_select",
+                "required": true,
+                "options": ["None", "Right \u2014 small", "Right \u2014 moderate", "Right \u2014 large", "Left \u2014 small", "Left \u2014 moderate", "Left \u2014 large", "Bilateral", "Loculated", "Uncertain"]
+              },
+              {
+                "item_id": "LC_1_1",
+                "item_text": "Pleural thickening or plaques",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Right", "Left", "Bilateral"]
+              },
+              {
+                "item_id": "LC_1_2",
+                "item_text": "Pneumothorax (visible portion)",
+                "type": "single_select",
+                "required": true,
+                "options": ["None", "Right", "Left", "Bilateral", "Uncertain"]
+              },
+              {
+                "item_id": "LC_1_3",
+                "item_text": "Pericardial effusion",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Small", "Moderate", "Large", "Uncertain"]
+              },
+              {
+                "item_id": "LC_1_4",
+                "item_text": "Pericardial thickening or calcification",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Thickening", "Calcification", "Both"]
+              }
+            ]
+          },
+          {
+            "group_name": "Cardiomediastinal at imaged level",
+            "items": [
+              {
+                "item_id": "LC_2_0",
+                "item_text": "Cardiac chamber size (gross)",
+                "type": "single_select",
+                "required": true,
+                "options": ["Normal", "Left-sided enlargement", "Right-sided enlargement", "Globular / four-chamber enlargement", "Difficult to assess"]
+              },
+              {
+                "item_id": "LC_2_1",
+                "item_text": "Coronary artery calcification (qualitative)",
+                "type": "single_select",
+                "required": true,
+                "options": ["None", "Mild", "Moderate", "Severe", "Difficult to assess"]
+              },
+              {
+                "item_id": "LC_2_2",
+                "item_text": "Thoracic aorta (visible portion)",
+                "type": "describe",
+                "required": true,
+                "placeholder": "Describe \u2014 e.g. normal calibre, ectatic, calcified, dissection flap, intramural haematoma"
+              },
+              {
+                "item_id": "LC_2_3",
+                "item_text": "Hiatal hernia",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Small sliding", "Large sliding", "Paraoesophageal", "Mixed", "Uncertain"]
+              }
+            ]
+          },
+          {
+            "group_name": "Lower thoracic skeleton",
+            "items": [
+              {
+                "item_id": "LC_3_0",
+                "item_text": "Lower thoracic spine and posterior ribs",
+                "type": "describe",
+                "required": true,
+                "placeholder": "Describe findings or state unremarkable"
+              }
+            ]
+          }
+        ]
+      },
+
+      "LB": {
+        "section_id": "LB",
+        "section_label": "Liver and biliary system",
+        "section_note_placeholder": "Optional notes for Liver and biliary system",
+        "normal_template": "Normal liver morphology and enhancement. No focal lesion. Normal gallbladder. Normal calibre intrahepatic and common bile ducts.",
+        "groups": [
+          {
+            "group_name": "Liver parenchyma",
+            "items": [
+              {
+                "item_id": "LB_0_0",
+                "item_text": "Liver size",
+                "type": "single_select",
+                "required": true,
+                "options": ["Normal", "Hepatomegaly", "Atrophy \u2014 right lobe", "Atrophy \u2014 left lobe", "Caudate hypertrophy"]
+              },
+              {
+                "item_id": "LB_0_1",
+                "item_text": "Liver morphology and contour",
+                "type": "single_select",
+                "required": true,
+                "options": ["Smooth", "Nodular", "Lobulated", "Surgical resection changes", "Difficult to assess"]
+              },
+              {
+                "item_id": "LB_0_2",
+                "item_text": "Parenchymal attenuation",
+                "type": "single_select",
+                "required": true,
+                "options": ["Normal", "Diffuse steatosis", "Focal steatosis", "Geographic sparing", "Increased density (iron / amiodarone)", "Difficult to assess"]
+              },
+              {
+                "item_id": "LB_0_3",
+                "item_text": "Enhancement pattern",
+                "type": "single_select",
+                "required": true,
+                "options": ["Homogeneous", "Heterogeneous", "Perfusion abnormality (THAD/THID)", "Non-contrast study", "Difficult to assess"]
+              }
+            ]
+          },
+          {
+            "group_name": "Focal lesions",
+            "items": [
+              {
+                "item_id": "LB_1_0",
+                "item_text": "Focal hepatic lesions",
+                "type": "single_select",
+                "required": true,
+                "options": [
+                  "Absent",
+                  "Simple cyst(s)",
+                  "Hemangioma",
+                  "FNH",
+                  "Adenoma",
+                  "Suspected HCC",
+                  "Suspected metastasis",
+                  "Indeterminate \u2014 describe",
+                  "Multiple lesions \u2014 describe"
+                ],
+                "conditional": {
+                  "trigger_option_any_except": ["Absent"],
+                  "reveals": {
+                    "item_id": "LB_1_0_desc",
+                    "item_text": "Describe focal lesion(s)",
+                    "type": "describe",
+                    "required": true,
+                    "placeholder": "Size, segment(s), enhancement across phases, washout, capsule"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "group_name": "Hepatic vasculature",
+            "items": [
+              {
+                "item_id": "LB_2_0",
+                "item_text": "Portal vein (intrahepatic branches)",
+                "type": "single_select",
+                "required": true,
+                "options": ["Patent", "Partial thrombus", "Occlusive thrombus", "Cavernous transformation", "Difficult to assess"]
+              },
+              {
+                "item_id": "LB_2_1",
+                "item_text": "Hepatic veins",
+                "type": "single_select",
+                "required": true,
+                "options": ["Patent", "Narrowed", "Thrombosed", "Difficult to assess"]
+              },
+              {
+                "item_id": "LB_2_2",
+                "item_text": "Hepatic artery anatomy",
+                "type": "single_select",
+                "required": true,
+                "options": ["Conventional", "Replaced right hepatic", "Replaced left hepatic", "Accessory branch", "Other variant"]
+              }
+            ]
+          },
+          {
+            "group_name": "Surgical changes",
+            "items": [
+              {
+                "item_id": "LB_3_0",
+                "item_text": "Hepatobiliary intervention or surgical changes",
+                "type": "single_select",
+                "required": true,
+                "options": ["None", "Resection", "Ablation cavity", "TIPS", "Biliary stent", "Other \u2014 describe in section note"]
+              }
+            ]
+          },
+          {
+            "group_name": "Gallbladder",
+            "items": [
+              {
+                "item_id": "LB_4_0",
+                "item_text": "Gallbladder presence",
+                "type": "single_select",
+                "required": true,
+                "options": ["Present", "Post-cholecystectomy"]
+              },
+              {
+                "item_id": "LB_4_1",
+                "item_text": "Gallbladder wall",
+                "type": "single_select",
+                "required": true,
+                "options": ["Normal thickness", "Thickened", "Calcified (porcelain)", "Difficult to assess", "Not applicable"]
+              },
+              {
+                "item_id": "LB_4_2",
+                "item_text": "Gallbladder contents",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Calculi", "Sludge", "Polyp(s)", "Mass suspected", "Not applicable"]
+              },
+              {
+                "item_id": "LB_4_3",
+                "item_text": "Pericholecystic findings",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Fat stranding", "Fluid", "Not applicable"]
+              }
+            ]
+          },
+          {
+            "group_name": "Biliary tree",
+            "items": [
+              {
+                "item_id": "LB_5_0",
+                "item_text": "Intrahepatic bile ducts",
+                "type": "single_select",
+                "required": true,
+                "options": ["Normal calibre", "Mildly dilated", "Moderately dilated", "Markedly dilated", "Difficult to assess"]
+              },
+              {
+                "item_id": "LB_5_1",
+                "item_text": "Common bile duct",
+                "type": "describe",
+                "required": true,
+                "placeholder": "State calibre in mm, level of any obstruction, presence of stent/stones"
+              },
+              {
+                "item_id": "LB_5_2",
+                "item_text": "Pneumobilia",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Present \u2014 post-intervention", "Present \u2014 unexplained"]
+              },
+              {
+                "item_id": "LB_5_3",
+                "item_text": "Periportal oedema",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Present"]
+              }
+            ]
+          }
+        ]
+      },
+
+      "PN": {
+        "section_id": "PN",
+        "section_label": "Pancreas",
+        "section_note_placeholder": "Optional notes for Pancreas",
+        "normal_template": "Normal pancreatic morphology and enhancement. No ductal dilation or focal mass. No peripancreatic fluid or fat stranding.",
+        "groups": [
+          {
+            "group_name": "Parenchyma",
+            "items": [
+              {
+                "item_id": "PN_0_0",
+                "item_text": "Morphology",
+                "type": "single_select",
+                "required": true,
+                "options": ["Normal", "Diffuse atrophy", "Focal atrophy", "Lipomatous replacement", "Bulky / focally enlarged", "Difficult to assess"]
+              },
+              {
+                "item_id": "PN_0_1",
+                "item_text": "Enhancement",
+                "type": "single_select",
+                "required": true,
+                "options": ["Homogeneous", "Focal hypoenhancement", "Heterogeneous", "Non-contrast study", "Difficult to assess"]
+              },
+              {
+                "item_id": "PN_0_2",
+                "item_text": "Calcifications",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Focal", "Diffuse (chronic pancreatitis pattern)"]
+              }
+            ]
+          },
+          {
+            "group_name": "Lesions and ducts",
+            "items": [
+              {
+                "item_id": "PN_1_0",
+                "item_text": "Focal lesions",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Cystic lesion", "Suspected IPMN (side-branch)", "Suspected IPMN (main duct)", "Solid mass \u2014 head", "Solid mass \u2014 body", "Solid mass \u2014 tail", "Suspected neuroendocrine tumour", "Indeterminate \u2014 describe"],
+                "conditional": {
+                  "trigger_option_any_except": ["Absent"],
+                  "reveals": {
+                    "item_id": "PN_1_0_desc",
+                    "item_text": "Describe pancreatic lesion",
+                    "type": "describe",
+                    "required": true,
+                    "placeholder": "Size, location, enhancement, ductal communication, vascular involvement"
+                  }
+                }
+              },
+              {
+                "item_id": "PN_1_1",
+                "item_text": "Main pancreatic duct",
+                "type": "single_select",
+                "required": true,
+                "options": ["Normal calibre", "Mildly dilated", "Moderately dilated", "Markedly dilated", "Beaded / chain-of-lakes"]
+              },
+              {
+                "item_id": "PN_1_2",
+                "item_text": "Side-branch dilation",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Present \u2014 focal", "Present \u2014 multifocal"]
+              },
+              {
+                "item_id": "PN_1_3",
+                "item_text": "Anatomic variants",
+                "type": "single_select",
+                "required": true,
+                "options": ["None", "Pancreas divisum", "Annular pancreas", "Other"]
+              }
+            ]
+          },
+          {
+            "group_name": "Peripancreatic region",
+            "items": [
+              {
+                "item_id": "PN_2_0",
+                "item_text": "Peripancreatic fat stranding",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Mild", "Moderate", "Severe"]
+              },
+              {
+                "item_id": "PN_2_1",
+                "item_text": "Peripancreatic collections",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Acute peripancreatic fluid collection", "Pseudocyst", "Acute necrotic collection", "Walled-off necrosis"]
+              },
+              {
+                "item_id": "PN_2_2",
+                "item_text": "Splenic vein (adjacent)",
+                "type": "single_select",
+                "required": true,
+                "options": ["Patent", "Narrowed", "Thrombosed", "Difficult to assess"]
+              }
+            ]
+          }
+        ]
+      },
+
+      "SP": {
+        "section_id": "SP",
+        "section_label": "Spleen",
+        "section_note_placeholder": "Optional notes for Spleen",
+        "normal_template": "Normal splenic size and enhancement. No focal lesion.",
+        "groups": [
+          {
+            "group_name": "Spleen",
+            "items": [
+              {
+                "item_id": "SP_0_0",
+                "item_text": "Splenic size (craniocaudal)",
+                "type": "single_select",
+                "required": true,
+                "options": ["Normal (\u226413 cm)", "Borderline (13\u201314 cm)", "Splenomegaly (>14 cm)", "Massive splenomegaly", "Small / atrophic"]
+              },
+              {
+                "item_id": "SP_0_1",
+                "item_text": "Enhancement pattern",
+                "type": "single_select",
+                "required": true,
+                "options": ["Normal arterial mottling", "Persistent heterogeneity", "Hypoenhancing region(s)", "Non-contrast study", "Difficult to assess"]
+              },
+              {
+                "item_id": "SP_0_2",
+                "item_text": "Focal lesions",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Cyst(s)", "Hemangioma", "Infarct", "Abscess", "Suspected lymphoma", "Suspected metastasis", "Indeterminate \u2014 describe"],
+                "conditional": {
+                  "trigger_option_any_except": ["Absent"],
+                  "reveals": {
+                    "item_id": "SP_0_2_desc",
+                    "item_text": "Describe splenic lesion",
+                    "type": "describe",
+                    "required": true,
+                    "placeholder": "Size, location, enhancement"
+                  }
+                }
+              },
+              {
+                "item_id": "SP_0_3",
+                "item_text": "Calcifications",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Granulomas", "Other"]
+              },
+              {
+                "item_id": "SP_0_4",
+                "item_text": "Accessory spleen / splenule",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Present"]
+              },
+              {
+                "item_id": "SP_0_5",
+                "item_text": "Perisplenic region",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Fluid", "Haematoma", "Stranding"]
+              }
+            ]
+          }
+        ]
+      },
+
+      "AD": {
+        "section_id": "AD",
+        "section_label": "Adrenal glands",
+        "section_note_placeholder": "Optional notes for Adrenal glands",
+        "normal_template": "Normal adrenal morphology bilaterally. No adrenal mass.",
+        "groups": [
+          {
+            "group_name": "Right adrenal",
+            "items": [
+              {
+                "item_id": "AD_0_0",
+                "item_text": "Right adrenal morphology",
+                "type": "single_select",
+                "required": true,
+                "options": ["Normal", "Diffuse thickening / hyperplasia", "Focal nodule", "Mass", "Calcification", "Hemorrhage", "Difficult to assess"]
+              },
+              {
+                "item_id": "AD_0_1",
+                "item_text": "Right adrenal lesion characterization",
+                "type": "describe",
+                "required": true,
+                "placeholder": "If lesion present: size, unenhanced HU, washout characteristics, otherwise state not applicable"
+              }
+            ]
+          },
+          {
+            "group_name": "Left adrenal",
+            "items": [
+              {
+                "item_id": "AD_1_0",
+                "item_text": "Left adrenal morphology",
+                "type": "single_select",
+                "required": true,
+                "options": ["Normal", "Diffuse thickening / hyperplasia", "Focal nodule", "Mass", "Calcification", "Hemorrhage", "Difficult to assess"]
+              },
+              {
+                "item_id": "AD_1_1",
+                "item_text": "Left adrenal lesion characterization",
+                "type": "describe",
+                "required": true,
+                "placeholder": "If lesion present: size, unenhanced HU, washout characteristics, otherwise state not applicable"
+              }
+            ]
+          }
+        ]
+      },
+
+      "GU": {
+        "section_id": "GU",
+        "section_label": "Kidneys and urinary tract",
+        "section_note_placeholder": "Optional notes for Kidneys and urinary tract",
+        "normal_template": "Normal renal size, morphology, and symmetric enhancement bilaterally. No solid mass. No urolithiasis or hydronephrosis. Normal bladder wall thickness and enhancement.",
+        "groups": [
+          {
+            "group_name": "Right kidney",
+            "items": [
+              {
+                "item_id": "GU_0_0",
+                "item_text": "Right kidney size and position",
+                "type": "single_select",
+                "required": true,
+                "options": ["Normal", "Small", "Enlarged", "Malrotated", "Ectopic", "Absent / nephrectomy"]
+              },
+              {
+                "item_id": "GU_0_1",
+                "item_text": "Right kidney parenchyma",
+                "type": "single_select",
+                "required": true,
+                "options": ["Normal cortex and CMD", "Cortical thinning", "Scarring", "Loss of CMD", "Difficult to assess", "Not applicable"]
+              },
+              {
+                "item_id": "GU_0_2",
+                "item_text": "Right kidney lesions",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Simple cyst (Bosniak I)", "Bosniak II", "Bosniak IIF", "Bosniak III", "Bosniak IV", "Solid mass", "Angiomyolipoma", "Indeterminate \u2014 describe"],
+                "conditional": {
+                  "trigger_option_any_except": ["Absent"],
+                  "reveals": {
+                    "item_id": "GU_0_2_desc",
+                    "item_text": "Describe right kidney lesion",
+                    "type": "describe",
+                    "required": true,
+                    "placeholder": "Size, location, enhancement"
+                  }
+                }
+              },
+              {
+                "item_id": "GU_0_3",
+                "item_text": "Right hydronephrosis",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Mild", "Moderate", "Severe"]
+              }
+            ]
+          },
+          {
+            "group_name": "Left kidney",
+            "items": [
+              {
+                "item_id": "GU_1_0",
+                "item_text": "Left kidney size and position",
+                "type": "single_select",
+                "required": true,
+                "options": ["Normal", "Small", "Enlarged", "Malrotated", "Ectopic", "Absent / nephrectomy"]
+              },
+              {
+                "item_id": "GU_1_1",
+                "item_text": "Left kidney parenchyma",
+                "type": "single_select",
+                "required": true,
+                "options": ["Normal cortex and CMD", "Cortical thinning", "Scarring", "Loss of CMD", "Difficult to assess", "Not applicable"]
+              },
+              {
+                "item_id": "GU_1_2",
+                "item_text": "Left kidney lesions",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Simple cyst (Bosniak I)", "Bosniak II", "Bosniak IIF", "Bosniak III", "Bosniak IV", "Solid mass", "Angiomyolipoma", "Indeterminate \u2014 describe"],
+                "conditional": {
+                  "trigger_option_any_except": ["Absent"],
+                  "reveals": {
+                    "item_id": "GU_1_2_desc",
+                    "item_text": "Describe left kidney lesion",
+                    "type": "describe",
+                    "required": true,
+                    "placeholder": "Size, location, enhancement"
+                  }
+                }
+              },
+              {
+                "item_id": "GU_1_3",
+                "item_text": "Left hydronephrosis",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Mild", "Moderate", "Severe"]
+              }
+            ]
+          },
+          {
+            "group_name": "Stones and collecting system",
+            "items": [
+              {
+                "item_id": "GU_2_0",
+                "item_text": "Renal calculi",
+                "type": "multi_select",
+                "required": true,
+                "options": ["Absent", "Right \u2014 calyceal", "Right \u2014 pelvis", "Right \u2014 ureter", "Right \u2014 UVJ", "Left \u2014 calyceal", "Left \u2014 pelvis", "Left \u2014 ureter", "Left \u2014 UVJ", "Bilateral"]
+              },
+              {
+                "item_id": "GU_2_1",
+                "item_text": "Largest stone size and density",
+                "type": "describe",
+                "required": true,
+                "placeholder": "State size in mm and HU, otherwise not applicable"
+              },
+              {
+                "item_id": "GU_2_2",
+                "item_text": "Collecting system / urothelium",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Urothelial thickening", "Filling defect", "Difficult to assess"]
+              },
+              {
+                "item_id": "GU_2_3",
+                "item_text": "Perinephric region",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Fat stranding \u2014 right", "Fat stranding \u2014 left", "Fluid \u2014 right", "Fluid \u2014 left", "Bilateral"]
+              }
+            ]
+          },
+          {
+            "group_name": "Renal vasculature",
+            "items": [
+              {
+                "item_id": "GU_3_0",
+                "item_text": "Renal arteries",
+                "type": "single_select",
+                "required": true,
+                "options": ["Patent, conventional anatomy", "Accessory artery present", "Stenosis suspected", "Occluded", "Difficult to assess"]
+              },
+              {
+                "item_id": "GU_3_1",
+                "item_text": "Renal veins",
+                "type": "single_select",
+                "required": true,
+                "options": ["Patent", "Left renal vein \u2014 retroaortic", "Left renal vein \u2014 circumaortic", "Thrombosed", "Difficult to assess"]
+              }
+            ]
+          },
+          {
+            "group_name": "Bladder",
+            "items": [
+              {
+                "item_id": "GU_4_0",
+                "item_text": "Bladder filling and shape",
+                "type": "single_select",
+                "required": true,
+                "options": ["Adequately distended", "Underdistended", "Overdistended", "Catheterised"]
+              },
+              {
+                "item_id": "GU_4_1",
+                "item_text": "Bladder wall",
+                "type": "single_select",
+                "required": true,
+                "options": ["Normal thickness", "Diffuse thickening", "Focal thickening", "Trabeculated", "Difficult to assess"]
+              },
+              {
+                "item_id": "GU_4_2",
+                "item_text": "Bladder contents and lesions",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Calculi", "Mass / focal lesion", "Diverticulum / diverticula", "Blood / debris"]
+              },
+              {
+                "item_id": "GU_4_3",
+                "item_text": "Catheters and stents",
+                "type": "multi_select",
+                "required": true,
+                "options": ["None", "Foley catheter", "Right ureteric stent", "Left ureteric stent", "Bilateral ureteric stents", "Right nephrostomy", "Left nephrostomy"]
+              }
+            ]
+          }
+        ]
+      },
+
+      "GI": {
+        "section_id": "GI",
+        "section_label": "Gastrointestinal tract",
+        "section_note_placeholder": "Optional notes for Gastrointestinal tract",
+        "normal_template": "Normal morphology of the stomach and duodenum. Normal calibre small and large bowel without wall thickening. Normal appendix.",
+        "groups": [
+          {
+            "group_name": "Upper GI",
+            "items": [
+              {
+                "item_id": "GI_0_0",
+                "item_text": "Distal oesophagus and GE junction",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Wall thickening", "Hiatal hernia", "Mass suspected", "Difficult to assess"]
+              },
+              {
+                "item_id": "GI_0_1",
+                "item_text": "Stomach",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Underdistended \u2014 limited assessment", "Wall thickening", "Mass suspected", "Surgical changes (sleeve / bypass / gastrostomy)", "Pneumatosis", "Difficult to assess"]
+              },
+              {
+                "item_id": "GI_0_2",
+                "item_text": "Duodenum (all segments)",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Wall thickening", "Diverticulum / diverticula", "Mass suspected", "Obstruction", "Difficult to assess"]
+              }
+            ]
+          },
+          {
+            "group_name": "Small bowel",
+            "items": [
+              {
+                "item_id": "GI_1_0",
+                "item_text": "Small bowel calibre",
+                "type": "single_select",
+                "required": true,
+                "options": ["Normal", "Dilated", "Decompressed", "Mixed (transition point)"]
+              },
+              {
+                "item_id": "GI_1_1",
+                "item_text": "Small bowel wall and enhancement",
+                "type": "single_select",
+                "required": true,
+                "options": ["Normal", "Wall thickening", "Hyperenhancement", "Hypoenhancement / ischaemia", "Pneumatosis"]
+              },
+              {
+                "item_id": "GI_1_2",
+                "item_text": "Terminal ileum",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Wall thickening", "Hyperenhancement", "Stricture", "Difficult to assess"]
+              }
+            ]
+          },
+          {
+            "group_name": "Appendix and colon",
+            "items": [
+              {
+                "item_id": "GI_2_0",
+                "item_text": "Appendix",
+                "type": "single_select",
+                "required": true,
+                "options": ["Normal calibre, no inflammation", "Dilated (>6 mm) without inflammation", "Acute appendicitis features", "Appendicolith without inflammation", "Post-appendectomy", "Not visualised"]
+              },
+              {
+                "item_id": "GI_2_1",
+                "item_text": "Caecum and ascending colon",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Wall thickening", "Mass suspected", "Pneumatosis", "Difficult to assess"]
+              },
+              {
+                "item_id": "GI_2_2",
+                "item_text": "Transverse colon",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Wall thickening", "Mass suspected", "Pneumatosis", "Difficult to assess"]
+              },
+              {
+                "item_id": "GI_2_3",
+                "item_text": "Descending colon",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Wall thickening", "Diverticulosis", "Diverticulitis", "Mass suspected", "Difficult to assess"]
+              },
+              {
+                "item_id": "GI_2_4",
+                "item_text": "Sigmoid colon",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Wall thickening", "Diverticulosis", "Diverticulitis", "Mass suspected", "Difficult to assess"]
+              }
+            ]
+          },
+          {
+            "group_name": "Obstruction and ischaemia",
+            "items": [
+              {
+                "item_id": "GI_3_0",
+                "item_text": "Bowel obstruction",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Small bowel obstruction \u2014 simple", "Small bowel obstruction \u2014 closed loop", "Large bowel obstruction", "Ileus pattern", "Uncertain"]
+              },
+              {
+                "item_id": "GI_3_1",
+                "item_text": "Transition point",
+                "type": "describe",
+                "required": true,
+                "placeholder": "Describe location if obstruction present, otherwise not applicable"
+              },
+              {
+                "item_id": "GI_3_2",
+                "item_text": "Ischaemia features",
+                "type": "multi_select",
+                "required": true,
+                "options": ["Absent", "Wall thickening", "Hypoenhancement", "Pneumatosis intestinalis", "Portal venous gas", "Mesenteric venous gas"]
+              }
+            ]
+          },
+          {
+            "group_name": "Hernias",
+            "items": [
+              {
+                "item_id": "GI_4_0",
+                "item_text": "Hernias",
+                "type": "multi_select",
+                "required": true,
+                "options": ["Absent", "Ventral / midline", "Umbilical", "Incisional", "Spigelian", "Parastomal", "Lumbar", "Inguinal \u2014 right", "Inguinal \u2014 left", "Femoral \u2014 right", "Femoral \u2014 left", "Obturator", "Sciatic", "Internal hernia"]
+              },
+              {
+                "item_id": "GI_4_1",
+                "item_text": "Hernia content and complications",
+                "type": "describe",
+                "required": true,
+                "placeholder": "Describe content (bowel, fat) and any obstruction or strangulation features, otherwise not applicable"
+              }
+            ]
+          },
+          {
+            "group_name": "Surgical changes and devices",
+            "items": [
+              {
+                "item_id": "GI_5_0",
+                "item_text": "Stomas, anastomoses, surgical drains",
+                "type": "describe",
+                "required": true,
+                "placeholder": "Describe any present, otherwise state none"
+              }
+            ]
+          }
+        ]
+      },
+
+      "PR": {
+        "section_id": "PR",
+        "section_label": "Peritoneum and mesentery",
+        "section_note_placeholder": "Optional notes for Peritoneum and mesentery",
+        "normal_template": "No ascites, free air, or peritoneal abnormality.",
+        "groups": [
+          {
+            "group_name": "Free fluid",
+            "items": [
+              {
+                "item_id": "PR_0_0",
+                "item_text": "Free intraperitoneal fluid",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Trace", "Small", "Moderate", "Large", "Loculated"]
+              },
+              {
+                "item_id": "PR_0_1",
+                "item_text": "Fluid attenuation",
+                "type": "single_select",
+                "required": true,
+                "options": ["Not applicable", "Simple", "Complex / haemorrhagic", "High-density (active bleed)", "Septated"]
+              }
+            ]
+          },
+          {
+            "group_name": "Free air",
+            "items": [
+              {
+                "item_id": "PR_1_0",
+                "item_text": "Free intraperitoneal air",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Trace", "Small", "Moderate", "Large"]
+              },
+              {
+                "item_id": "PR_1_1",
+                "item_text": "Suspected source of pneumoperitoneum",
+                "type": "describe",
+                "required": true,
+                "placeholder": "Describe suspected source if free air present, otherwise not applicable"
+              }
+            ]
+          },
+          {
+            "group_name": "Peritoneum and omentum",
+            "items": [
+              {
+                "item_id": "PR_2_0",
+                "item_text": "Peritoneal surfaces",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Smooth thickening", "Nodular thickening", "Implants suspected"]
+              },
+              {
+                "item_id": "PR_2_1",
+                "item_text": "Omentum",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Stranding", "Caking", "Nodularity"]
+              },
+              {
+                "item_id": "PR_2_2",
+                "item_text": "Mesentery",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Misty mesentery", "Stranding", "Fluid", "Mass / nodularity"]
+              }
+            ]
+          },
+          {
+            "group_name": "Fluid collections",
+            "items": [
+              {
+                "item_id": "PR_3_0",
+                "item_text": "Discrete fluid collections",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Simple collection", "Complex collection", "Suspected abscess", "Haematoma"]
+              },
+              {
+                "item_id": "PR_3_1",
+                "item_text": "Collection \u2014 location and size",
+                "type": "describe",
+                "required": true,
+                "placeholder": "Describe location, size, drainability if collection present, otherwise not applicable"
+              }
+            ]
+          }
+        ]
+      },
+
+      "PV_M": {
+        "section_id": "PV_M",
+        "section_label": "Male pelvis",
+        "section_note_placeholder": "Optional notes for Male pelvis",
+        "normal_template": "Normal size and contours of the prostate and seminal vesicles. No pelvic mass.",
+        "groups": [
+          {
+            "group_name": "Prostate and seminal vesicles",
+            "items": [
+              {
+                "item_id": "PV_M_0_0",
+                "item_text": "Prostate size and contour",
+                "type": "single_select",
+                "required": true,
+                "options": ["Normal", "Enlarged", "Lobulated contour", "Surgical changes", "Difficult to assess"]
+              },
+              {
+                "item_id": "PV_M_0_1",
+                "item_text": "Prostate calcifications",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Few scattered", "Multiple"]
+              },
+              {
+                "item_id": "PV_M_0_2",
+                "item_text": "Focal prostatic lesion (limited on CT)",
+                "type": "single_select",
+                "required": true,
+                "options": ["None identified", "Focal abnormality \u2014 describe in section note", "Difficult to assess"]
+              },
+              {
+                "item_id": "PV_M_0_3",
+                "item_text": "Seminal vesicles",
+                "type": "single_select",
+                "required": true,
+                "options": ["Symmetric, unremarkable", "Asymmetric", "Enlarged", "Mass suspected"]
+              }
+            ]
+          },
+          {
+            "group_name": "Scrotum and inguinal canals",
+            "items": [
+              {
+                "item_id": "PV_M_1_0",
+                "item_text": "Spermatic cords",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Varicocele \u2014 right", "Varicocele \u2014 left", "Varicocele \u2014 bilateral", "Difficult to assess"]
+              },
+              {
+                "item_id": "PV_M_1_1",
+                "item_text": "Imaged scrotum and testes",
+                "type": "describe",
+                "required": true,
+                "placeholder": "Describe findings or state unremarkable"
+              },
+              {
+                "item_id": "PV_M_1_2",
+                "item_text": "Inguinal canals",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Hernia \u2014 right", "Hernia \u2014 left", "Hernia \u2014 bilateral", "Lymphadenopathy"]
+              }
+            ]
+          }
+        ]
+      },
+
+      "PV_F": {
+        "section_id": "PV_F",
+        "section_label": "Female pelvis",
+        "section_note_placeholder": "Optional notes for Female pelvis",
+        "normal_template": "Uterus normal in size and position. No adnexal mass. No free pelvic fluid.",
+        "groups": [
+          {
+            "group_name": "Uterus",
+            "items": [
+              {
+                "item_id": "PV_F_0_0",
+                "item_text": "Uterus presence and size",
+                "type": "single_select",
+                "required": true,
+                "options": ["Present, normal size", "Enlarged", "Atrophic", "Post-hysterectomy", "Difficult to assess"]
+              },
+              {
+                "item_id": "PV_F_0_1",
+                "item_text": "Uterine position",
+                "type": "single_select",
+                "required": true,
+                "options": ["Anteverted", "Retroverted", "Axial", "Not applicable"]
+              },
+              {
+                "item_id": "PV_F_0_2",
+                "item_text": "Endometrial stripe (if assessable)",
+                "type": "describe",
+                "required": true,
+                "placeholder": "State thickness if assessable, otherwise not applicable / limited on CT"
+              },
+              {
+                "item_id": "PV_F_0_3",
+                "item_text": "Myometrium / fibroids",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Single fibroid", "Multiple fibroids", "Calcified fibroid(s)", "Adenomyosis suspected"]
+              },
+              {
+                "item_id": "PV_F_0_4",
+                "item_text": "Cervix",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Bulky", "Mass suspected", "Difficult to assess"]
+              }
+            ]
+          },
+          {
+            "group_name": "Adnexa",
+            "items": [
+              {
+                "item_id": "PV_F_1_0",
+                "item_text": "Right adnexa / ovary",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Simple cyst", "Complex cyst", "Solid mass", "Hydrosalpinx", "Not visualised", "Post-oophorectomy"]
+              },
+              {
+                "item_id": "PV_F_1_1",
+                "item_text": "Left adnexa / ovary",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Simple cyst", "Complex cyst", "Solid mass", "Hydrosalpinx", "Not visualised", "Post-oophorectomy"]
+              },
+              {
+                "item_id": "PV_F_1_2",
+                "item_text": "Adnexal lesion description",
+                "type": "describe",
+                "required": true,
+                "placeholder": "If lesion present: side, size, attenuation, septations, solid component, otherwise not applicable"
+              }
+            ]
+          },
+          {
+            "group_name": "Pelvic environment",
+            "items": [
+              {
+                "item_id": "PV_F_2_0",
+                "item_text": "Free pelvic fluid",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Physiologic / trace", "Small", "Moderate", "Large"]
+              },
+              {
+                "item_id": "PV_F_2_1",
+                "item_text": "Vagina",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Mass suspected", "Tampon in situ", "Difficult to assess"]
+              },
+              {
+                "item_id": "PV_F_2_2",
+                "item_text": "Devices (IUD / pessary)",
+                "type": "single_select",
+                "required": true,
+                "options": ["None", "IUD \u2014 well positioned", "IUD \u2014 malpositioned", "Pessary"]
+              }
+            ]
+          }
+        ]
+      },
+
+      "RA": {
+        "section_id": "RA",
+        "section_label": "Rectum and anal canal",
+        "section_note_placeholder": "Optional notes for Rectum and anal canal",
+        "normal_template": "Normal rectal wall thickness. No perirectal mass or fluid collection.",
+        "groups": [
+          {
+            "group_name": "Rectum",
+            "items": [
+              {
+                "item_id": "RA_0_0",
+                "item_text": "Rectal wall thickness and enhancement",
+                "type": "single_select",
+                "required": true,
+                "options": ["Normal", "Diffuse thickening", "Focal thickening", "Mass suspected", "Difficult to assess"]
+              },
+              {
+                "item_id": "RA_0_1",
+                "item_text": "Rectal distension",
+                "type": "single_select",
+                "required": true,
+                "options": ["Adequately distended", "Underdistended \u2014 limited assessment", "Overdistended"]
+              },
+              {
+                "item_id": "RA_0_2",
+                "item_text": "Mesorectum",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Fat stranding", "Nodes \u2014 see lymph node section", "Fluid"]
+              }
+            ]
+          },
+          {
+            "group_name": "Perirectal and anal canal",
+            "items": [
+              {
+                "item_id": "RA_1_0",
+                "item_text": "Perirectal collections",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Fluid", "Suspected abscess", "Haematoma"]
+              },
+              {
+                "item_id": "RA_1_1",
+                "item_text": "Fistulae",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Perianal", "Rectovaginal", "Rectovesical", "Other \u2014 describe"]
+              },
+              {
+                "item_id": "RA_1_2",
+                "item_text": "Anal canal",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Wall thickening", "Mass suspected", "Difficult to assess"]
+              },
+              {
+                "item_id": "RA_1_3",
+                "item_text": "Hemorrhoids",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Internal", "External", "Both"]
+              },
+              {
+                "item_id": "RA_1_4",
+                "item_text": "Pelvic floor (levator ani)",
+                "type": "single_select",
+                "required": true,
+                "options": ["Symmetric", "Asymmetric", "Difficult to assess"]
+              }
+            ]
+          }
+        ]
+      },
+
+      "LN": {
+        "section_id": "LN",
+        "section_label": "Lymph nodes",
+        "section_note_placeholder": "Optional notes for Lymph nodes",
+        "normal_template": "No pathologically enlarged lymph nodes by size criteria.",
+        "groups": [
+          {
+            "group_name": "Chest and upper abdomen",
+            "items": [
+              {
+                "item_id": "LN_0_0",
+                "item_text": "Cardiophrenic / lower chest nodes",
+                "type": "single_select",
+                "required": true,
+                "options": ["No adenopathy", "Borderline", "Enlarged \u2014 describe"]
+              },
+              {
+                "item_id": "LN_0_1",
+                "item_text": "Gastrohepatic ligament",
+                "type": "single_select",
+                "required": true,
+                "options": ["No adenopathy", "Borderline", "Enlarged \u2014 describe"]
+              },
+              {
+                "item_id": "LN_0_2",
+                "item_text": "Coeliac, portocaval, porta hepatis",
+                "type": "single_select",
+                "required": true,
+                "options": ["No adenopathy", "Borderline", "Enlarged \u2014 describe"]
+              },
+              {
+                "item_id": "LN_0_3",
+                "item_text": "Peripancreatic and retrocrural",
+                "type": "single_select",
+                "required": true,
+                "options": ["No adenopathy", "Borderline", "Enlarged \u2014 describe"]
+              }
+            ]
+          },
+          {
+            "group_name": "Retroperitoneum and mesentery",
+            "items": [
+              {
+                "item_id": "LN_1_0",
+                "item_text": "Para-aortic / aortocaval / paracaval",
+                "type": "single_select",
+                "required": true,
+                "options": ["No adenopathy", "Borderline", "Enlarged \u2014 describe"]
+              },
+              {
+                "item_id": "LN_1_1",
+                "item_text": "Mesenteric (root, ileocolic)",
+                "type": "single_select",
+                "required": true,
+                "options": ["No adenopathy", "Borderline", "Enlarged \u2014 describe"]
+              }
+            ]
+          },
+          {
+            "group_name": "Pelvis and inguinal",
+            "items": [
+              {
+                "item_id": "LN_2_0",
+                "item_text": "Common iliac",
+                "type": "single_select",
+                "required": true,
+                "options": ["No adenopathy", "Borderline", "Enlarged \u2014 describe"]
+              },
+              {
+                "item_id": "LN_2_1",
+                "item_text": "External iliac",
+                "type": "single_select",
+                "required": true,
+                "options": ["No adenopathy", "Borderline", "Enlarged \u2014 describe"]
+              },
+              {
+                "item_id": "LN_2_2",
+                "item_text": "Internal iliac",
+                "type": "single_select",
+                "required": true,
+                "options": ["No adenopathy", "Borderline", "Enlarged \u2014 describe"]
+              },
+              {
+                "item_id": "LN_2_3",
+                "item_text": "Obturator",
+                "type": "single_select",
+                "required": true,
+                "options": ["No adenopathy", "Borderline", "Enlarged \u2014 describe"]
+              },
+              {
+                "item_id": "LN_2_4",
+                "item_text": "Presacral",
+                "type": "single_select",
+                "required": true,
+                "options": ["No adenopathy", "Borderline", "Enlarged \u2014 describe"]
+              },
+              {
+                "item_id": "LN_2_5",
+                "item_text": "Mesorectal",
+                "type": "single_select",
+                "required": true,
+                "options": ["No adenopathy", "Borderline", "Enlarged \u2014 describe"]
+              },
+              {
+                "item_id": "LN_2_6",
+                "item_text": "Inguinal (superficial and deep)",
+                "type": "single_select",
+                "required": true,
+                "options": ["No adenopathy", "Borderline \u2014 right", "Borderline \u2014 left", "Enlarged \u2014 right", "Enlarged \u2014 left", "Bilateral enlarged"]
+              }
+            ]
+          },
+          {
+            "group_name": "Largest node and morphology",
+            "items": [
+              {
+                "item_id": "LN_3_0",
+                "item_text": "Largest abnormal node \u2014 short axis",
+                "type": "describe",
+                "required": true,
+                "placeholder": "State station and short-axis size in mm, otherwise not applicable"
+              },
+              {
+                "item_id": "LN_3_1",
+                "item_text": "Nodal morphology",
+                "type": "single_select",
+                "required": true,
+                "options": ["Not applicable", "Preserved fatty hilum", "Rounded", "Necrotic", "Calcified", "Conglomerate mass"]
+              }
+            ]
+          }
+        ]
+      },
+
+      "VS": {
+        "section_id": "VS",
+        "section_label": "Vasculature",
+        "section_note_placeholder": "Optional notes for Vasculature",
+        "normal_template": "Abdominal aorta normal in calibre without aneurysm or dissection. Visceral arteries patent. Portal, splenic, and superior mesenteric veins patent. IVC and iliac vessels patent.",
+        "groups": [
+          {
+            "group_name": "Aorta",
+            "items": [
+              {
+                "item_id": "VS_0_0",
+                "item_text": "Abdominal aorta calibre",
+                "type": "single_select",
+                "required": true,
+                "options": ["Normal", "Ectatic", "Aneurysmal \u2014 infrarenal", "Aneurysmal \u2014 suprarenal", "Aneurysmal \u2014 thoracoabdominal", "Post-repair (graft / stent-graft)"],
+                "conditional": {
+                  "trigger_option_any_except": ["Normal"],
+                  "reveals": {
+                    "item_id": "VS_0_0_desc",
+                    "item_text": "Describe aortic findings",
+                    "type": "describe",
+                    "required": true,
+                    "placeholder": "Maximum diameter, extent, mural thrombus, endoleak if post-repair"
+                  }
+                }
+              },
+              {
+                "item_id": "VS_0_1",
+                "item_text": "Aortic dissection / IMH",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Dissection flap", "Intramural haematoma", "Penetrating ulcer", "Uncertain"]
+              },
+              {
+                "item_id": "VS_0_2",
+                "item_text": "Atherosclerotic burden",
+                "type": "single_select",
+                "required": true,
+                "options": ["None / minimal", "Mild", "Moderate", "Severe"]
+              }
+            ]
+          },
+          {
+            "group_name": "Visceral arteries",
+            "items": [
+              {
+                "item_id": "VS_1_0",
+                "item_text": "Coeliac axis",
+                "type": "single_select",
+                "required": true,
+                "options": ["Patent", "Stenosis suspected", "Median arcuate ligament impression", "Occluded", "Difficult to assess"]
+              },
+              {
+                "item_id": "VS_1_1",
+                "item_text": "SMA",
+                "type": "single_select",
+                "required": true,
+                "options": ["Patent", "Stenosis", "Thrombus", "Dissection", "Difficult to assess"]
+              },
+              {
+                "item_id": "VS_1_2",
+                "item_text": "IMA",
+                "type": "single_select",
+                "required": true,
+                "options": ["Patent", "Stenosis", "Occluded", "Not visualised"]
+              },
+              {
+                "item_id": "VS_1_3",
+                "item_text": "Splenic artery",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Tortuous", "Aneurysm", "Pseudoaneurysm", "Calcified"]
+              },
+              {
+                "item_id": "VS_1_4",
+                "item_text": "Common hepatic artery",
+                "type": "single_select",
+                "required": true,
+                "options": ["Patent, conventional", "Variant anatomy", "Stenosis", "Aneurysm", "Difficult to assess"]
+              }
+            ]
+          },
+          {
+            "group_name": "IVC and portal venous system",
+            "items": [
+              {
+                "item_id": "VS_2_0",
+                "item_text": "Inferior vena cava",
+                "type": "single_select",
+                "required": true,
+                "options": ["Patent, normal calibre", "Distended (volume overload)", "Slit-like (volume depletion)", "Thrombus", "Filter in situ", "Anatomic variant", "Difficult to assess"]
+              },
+              {
+                "item_id": "VS_2_1",
+                "item_text": "Main portal vein",
+                "type": "single_select",
+                "required": true,
+                "options": ["Patent", "Partial thrombus", "Occlusive thrombus", "Cavernous transformation", "Tumour thrombus", "Difficult to assess"]
+              },
+              {
+                "item_id": "VS_2_2",
+                "item_text": "Splenic vein (main)",
+                "type": "single_select",
+                "required": true,
+                "options": ["Patent", "Narrowed", "Thrombosed", "Difficult to assess"]
+              },
+              {
+                "item_id": "VS_2_3",
+                "item_text": "Superior mesenteric vein",
+                "type": "single_select",
+                "required": true,
+                "options": ["Patent", "Narrowed", "Thrombosed", "Difficult to assess"]
+              },
+              {
+                "item_id": "VS_2_4",
+                "item_text": "Portosystemic collaterals / varices",
+                "type": "multi_select",
+                "required": true,
+                "options": ["Absent", "Gastric / oesophageal", "Splenorenal", "Recanalised paraumbilical", "Retroperitoneal", "Other"]
+              }
+            ]
+          },
+          {
+            "group_name": "Iliac and pelvic vessels",
+            "items": [
+              {
+                "item_id": "VS_3_0",
+                "item_text": "Common, external, internal iliac arteries",
+                "type": "single_select",
+                "required": true,
+                "options": ["Patent, normal calibre", "Atherosclerotic", "Aneurysmal", "Stenosis", "Occlusion", "Post-stent / graft"]
+              },
+              {
+                "item_id": "VS_3_1",
+                "item_text": "Iliac veins",
+                "type": "single_select",
+                "required": true,
+                "options": ["Patent", "Compression (May-Thurner)", "Thrombus", "Difficult to assess"]
+              },
+              {
+                "item_id": "VS_3_2",
+                "item_text": "Common femoral vessels (at imaged level)",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Aneurysm", "Pseudoaneurysm", "Thrombus", "Post-intervention"]
+              }
+            ]
+          }
+        ]
+      },
+
+      "MS": {
+        "section_id": "MS",
+        "section_label": "Musculoskeletal and body wall",
+        "section_note_placeholder": "Optional notes for Musculoskeletal and body wall",
+        "normal_template": "No aggressive osseous lesion. Vertebral body heights and alignment preserved. No body wall mass.",
+        "groups": [
+          {
+            "group_name": "Bones",
+            "items": [
+              {
+                "item_id": "MS_0_0",
+                "item_text": "Aggressive osseous lesions",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Lytic", "Sclerotic", "Mixed", "Pathologic fracture"],
+                "conditional": {
+                  "trigger_option_any_except": ["Absent"],
+                  "reveals": {
+                    "item_id": "MS_0_0_desc",
+                    "item_text": "Describe aggressive lesion(s)",
+                    "type": "describe",
+                    "required": true,
+                    "placeholder": "Location, size, character"
+                  }
+                }
+              },
+              {
+                "item_id": "MS_0_1",
+                "item_text": "Benign osseous lesions",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Bone island(s)", "Hemangioma(s)", "Other"]
+              },
+              {
+                "item_id": "MS_0_2",
+                "item_text": "Acute or recent fractures",
+                "type": "describe",
+                "required": true,
+                "placeholder": "Describe location and acuity, otherwise state none"
+              },
+              {
+                "item_id": "MS_0_3",
+                "item_text": "Vertebral body heights and alignment",
+                "type": "single_select",
+                "required": true,
+                "options": ["Preserved", "Compression / wedging", "Listhesis", "Fusion / surgical"]
+              },
+              {
+                "item_id": "MS_0_4",
+                "item_text": "Degenerative disease (overall burden)",
+                "type": "single_select",
+                "required": true,
+                "options": ["None / minimal", "Mild", "Moderate", "Severe"]
+              },
+              {
+                "item_id": "MS_0_5",
+                "item_text": "Bone density (qualitative)",
+                "type": "single_select",
+                "required": true,
+                "options": ["Normal", "Osteopenic", "Difficult to assess"]
+              },
+              {
+                "item_id": "MS_0_6",
+                "item_text": "Sacroiliac joints",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Sclerosis", "Erosions", "Fusion"]
+              },
+              {
+                "item_id": "MS_0_7",
+                "item_text": "Hips (visible portions)",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Osteoarthritis", "Effusion", "AVN suspected", "Prosthesis present"]
+              },
+              {
+                "item_id": "MS_0_8",
+                "item_text": "Pelvic ring integrity",
+                "type": "single_select",
+                "required": true,
+                "options": ["Intact", "Fracture(s)", "Difficult to assess"]
+              }
+            ]
+          },
+          {
+            "group_name": "Soft tissues and body wall",
+            "items": [
+              {
+                "item_id": "MS_1_0",
+                "item_text": "Abdominal wall musculature",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Atrophy", "Haematoma", "Defect / diastasis", "Mesh in situ"]
+              },
+              {
+                "item_id": "MS_1_1",
+                "item_text": "Subcutaneous fat",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Stranding / oedema", "Mass / lipoma", "Surgical changes"]
+              },
+              {
+                "item_id": "MS_1_2",
+                "item_text": "Skin and surgical scars",
+                "type": "describe",
+                "required": true,
+                "placeholder": "Describe relevant findings or state unremarkable"
+              }
+            ]
+          }
+        ]
+      },
+
+      "DEV": {
+        "section_id": "DEV",
+        "section_label": "Devices, tubes, and incidentals",
+        "section_note_placeholder": "Optional notes for Devices and incidentals",
+        "normal_template": "No indwelling devices. No clinically significant incidental findings.",
+        "groups": [
+          {
+            "group_name": "GI tubes and drains",
+            "items": [
+              {
+                "item_id": "DEV_0_0",
+                "item_text": "NG / OG / NJ tube",
+                "type": "single_select",
+                "required": false,
+                "placeholder": "Complete only if present",
+                "options": ["Not present", "Tip in stomach (optimal)", "Tip in oesophagus", "Coiled in pharynx / oesophagus", "Tip post-pyloric", "Malpositioned"]
+              },
+              {
+                "item_id": "DEV_0_1",
+                "item_text": "Gastrostomy / jejunostomy",
+                "type": "single_select",
+                "required": false,
+                "placeholder": "Complete only if present",
+                "options": ["Not present", "Well positioned", "Balloon displaced", "Leak / extravasation suspected"]
+              },
+              {
+                "item_id": "DEV_0_2",
+                "item_text": "Surgical drains",
+                "type": "describe",
+                "required": false,
+                "placeholder": "Describe location and tip position if present"
+              }
+            ]
+          },
+          {
+            "group_name": "Biliary and urinary devices",
+            "items": [
+              {
+                "item_id": "DEV_1_0",
+                "item_text": "Biliary stent / drain",
+                "type": "single_select",
+                "required": false,
+                "placeholder": "Complete only if present",
+                "options": ["Not present", "Well positioned", "Migrated", "Occluded / debris"]
+              },
+              {
+                "item_id": "DEV_1_1",
+                "item_text": "Ureteric stent(s)",
+                "type": "single_select",
+                "required": false,
+                "placeholder": "Complete only if present",
+                "options": ["Not present", "Right \u2014 well positioned", "Left \u2014 well positioned", "Bilateral \u2014 well positioned", "Malpositioned", "Encrusted"]
+              },
+              {
+                "item_id": "DEV_1_2",
+                "item_text": "Nephrostomy tube(s)",
+                "type": "single_select",
+                "required": false,
+                "placeholder": "Complete only if present",
+                "options": ["Not present", "Right \u2014 well positioned", "Left \u2014 well positioned", "Bilateral", "Malpositioned"]
+              },
+              {
+                "item_id": "DEV_1_3",
+                "item_text": "Foley / suprapubic catheter",
+                "type": "single_select",
+                "required": false,
+                "placeholder": "Complete only if present",
+                "options": ["Not present", "Foley in bladder", "Suprapubic catheter", "Malpositioned"]
+              }
+            ]
+          },
+          {
+            "group_name": "Vascular and other devices",
+            "items": [
+              {
+                "item_id": "DEV_2_0",
+                "item_text": "IVC filter",
+                "type": "single_select",
+                "required": false,
+                "placeholder": "Complete only if present",
+                "options": ["Not present", "Infrarenal, well positioned", "Suprarenal", "Tilted", "Strut perforation", "Thrombus"]
+              },
+              {
+                "item_id": "DEV_2_1",
+                "item_text": "Endovascular grafts / stents",
+                "type": "single_select",
+                "required": false,
+                "placeholder": "Complete only if present",
+                "options": ["Not present", "Aortic stent-graft \u2014 patent, no endoleak", "Endoleak suspected", "Iliac stent(s)", "Visceral stent(s)"]
+              },
+              {
+                "item_id": "DEV_2_2",
+                "item_text": "Spinal / orthopaedic hardware",
+                "type": "describe",
+                "required": false,
+                "placeholder": "Describe hardware if present"
+              },
+              {
+                "item_id": "DEV_2_3",
+                "item_text": "Peritoneal dialysis catheter",
+                "type": "single_select",
+                "required": false,
+                "placeholder": "Complete only if present",
+                "options": ["Not present", "Well positioned", "Malpositioned"]
+              },
+              {
+                "item_id": "DEV_2_4",
+                "item_text": "Other device / foreign material",
+                "type": "describe",
+                "required": false,
+                "placeholder": "Describe any other device or foreign material not listed above"
+              }
+            ]
+          },
+          {
+            "group_name": "Incidentals",
+            "items": [
+              {
+                "item_id": "DEV_3_0",
+                "item_text": "Incidental findings to flag (per ACR Incidental Findings recommendations)",
+                "type": "describe",
+                "required": true,
+                "placeholder": "List incidentals warranting follow-up or state none"
+              }
+            ]
+          }
+        ]
+      },
+
+      "CMP": {
+        "section_id": "CMP",
+        "section_label": "Comparison and summary",
+        "section_note_placeholder": "Optional notes for Comparison and summary",
+        "normal_template": "No prior study available for comparison. No clinically significant findings requiring direct communication.",
+        "gate": {
+          "type": "confirmation",
+          "confirmation_item": {
+            "item_id": "CMP_CONFIRM",
+            "item_text": "I have actively re-checked all sections and reviewed any prior study available",
+            "type": "single_select",
+            "required": true,
+            "options": ["Confirmed"],
+            "note": "This confirmation is required before the report can be submitted."
+          }
+        },
+        "groups": [
+          {
+            "group_name": "Prior comparison",
+            "items": [
+              {
+                "item_id": "CMP_0_0",
+                "item_text": "Prior study available for comparison",
+                "type": "single_select",
+                "required": true,
+                "options": ["No prior study", "Prior CT abdomen/pelvis", "Prior MRI", "Prior US", "Prior other modality"],
+                "conditional": {
+                  "trigger_option_any_except": ["No prior study"],
+                  "reveals": {
+                    "item_id": "CMP_0_0_desc",
+                    "item_text": "Comparison study details",
+                    "type": "describe",
+                    "required": true,
+                    "placeholder": "Date and modality of comparison study"
+                  }
+                }
+              },
+              {
+                "item_id": "CMP_0_1",
+                "item_text": "Interval change",
+                "type": "single_select",
+                "required": true,
+                "options": ["Not applicable \u2014 no prior", "No significant interval change", "Improvement", "Progression", "Mixed response", "New finding(s)"]
+              },
+              {
+                "item_id": "CMP_0_2",
+                "item_text": "Interval change \u2014 description",
+                "type": "describe",
+                "required": true,
+                "placeholder": "Describe per-finding change vs prior, or state not applicable"
+              }
+            ]
+          },
+          {
+            "group_name": "Communication and follow-up",
+            "items": [
+              {
+                "item_id": "CMP_1_0",
+                "item_text": "Critical / actionable finding",
+                "type": "single_select",
+                "required": true,
+                "options": ["None", "Present \u2014 communicated", "Present \u2014 communication pending"]
+              },
+              {
+                "item_id": "CMP_1_1",
+                "item_text": "Follow-up recommendation",
+                "type": "describe",
+                "required": true,
+                "placeholder": "State follow-up imaging or clinical recommendation, or state not required"
+              }
+            ]
+          }
+        ]
+      }
+
+    }
+  }
+}

@@ -1,0 +1,876 @@
+{
+  "flow_type": "CXR",
+  "label": "Chest X-Ray Systematic Review",
+  "version": 3,
+  "is_active": true,
+  "structure": {
+    "sections": {
+
+      "A": {
+        "section_id": "A",
+        "section_label": "Airway / Mediastinum",
+        "section_note_placeholder": "Optional notes for Airway / Mediastinum",
+        "groups": [
+          {
+            "group_name": "Trachea",
+            "items": [
+              {
+                "item_id": "A_0_0",
+                "item_text": "Trachea position",
+                "type": "single_select",
+                "required": true,
+                "options": ["Midline", "Deviated right", "Deviated left", "Difficult to assess"]
+              },
+              {
+                "item_id": "A_0_1",
+                "item_text": "Carinal angle",
+                "type": "single_select",
+                "required": true,
+                "options": ["Normal (<70°)", "Borderline 70–90°", "Clearly widened >90°", "Difficult to assess"]
+              }
+            ]
+          },
+          {
+            "group_name": "Main bronchi",
+            "items": [
+              {
+                "item_id": "A_1_0",
+                "item_text": "Main bronchi",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Right main bronchus abnormality", "Left main bronchus abnormality", "Bilateral abnormality"]
+              }
+            ]
+          },
+          {
+            "group_name": "Mediastinum",
+            "items": [
+              {
+                "item_id": "A_2_0",
+                "item_text": "Mediastinal shift",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Shifted right", "Shifted left", "Difficult to assess"]
+              },
+              {
+                "item_id": "A_2_1",
+                "item_text": "Mediastinal width",
+                "type": "describe",
+                "required": true,
+                "placeholder": "Describe — note: >8 cm threshold applies to PA erect only"
+              },
+              {
+                "item_id": "A_2_2",
+                "item_text": "Aortopulmonary (AP) window",
+                "type": "single_select",
+                "required": true,
+                "options": ["Patent", "Obliterated", "Difficult to assess"]
+              },
+              {
+                "item_id": "A_2_3",
+                "item_text": "Aortic knob",
+                "type": "describe",
+                "required": true,
+                "placeholder": "Describe — e.g. normal, calcified, enlarged, obscured"
+              }
+            ]
+          },
+          {
+            "group_name": "ETT",
+            "items": [
+              {
+                "item_id": "A_3_0",
+                "item_text": "ETT",
+                "type": "single_select",
+                "required": false,
+                "placeholder": "Complete only if ETT is present",
+                "options": ["Not present", "Tip 3–5 cm above carina (optimal)", "Too high (>5 cm above carina)", "Too low (<3 cm above carina)", "Right mainstem bronchus", "Left mainstem bronchus"]
+              }
+            ]
+          }
+        ]
+      },
+
+      "B": {
+        "section_id": "B",
+        "section_label": "Breathing",
+        "section_note_placeholder": "Optional notes for Breathing",
+        "groups": [
+          {
+            "group_name": "Lung volumes & symmetry",
+            "items": [
+              {
+                "item_id": "B_0_0",
+                "item_text": "Lung volumes",
+                "type": "single_select",
+                "required": true,
+                "options": ["Normal", "Hyperinflated", "Reduced bilaterally", "Asymmetric — right reduced", "Asymmetric — left reduced"]
+              },
+              {
+                "item_id": "B_0_1",
+                "item_text": "Aeration symmetry",
+                "type": "single_select",
+                "required": true,
+                "options": ["Symmetric", "Asymmetric — describe in section note"]
+              }
+            ]
+          },
+          {
+            "group_name": "Airspace opacity",
+            "items": [
+              {
+                "item_id": "B_1_0",
+                "item_text": "Air bronchograms / airspace opacity",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Focal consolidation", "Diffuse bilateral", "Perihilar / batwing", "Resorptive atelectasis"]
+              },
+              {
+                "item_id": "B_1_1",
+                "item_text": "Lobar / segmental consolidation",
+                "type": "multi_select",
+                "required": true,
+                "options": ["Absent", "RUL", "RML", "RLL", "LUL", "Lingula", "LLL", "Bilateral / multifocal"]
+              },
+              {
+                "item_id": "B_1_2",
+                "item_text": "Perihilar / batwing opacity",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Bilateral perihilar", "Batwing / butterfly", "Unilateral perihilar"]
+              },
+              {
+                "item_id": "B_1_3",
+                "item_text": "Peripheral subpleural opacity",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Right peripheral", "Left peripheral", "Bilateral peripheral"]
+              },
+              {
+                "item_id": "B_1_4",
+                "item_text": "Upper-lobe opacity / cavitation",
+                "type": "multi_select",
+                "required": true,
+                "options": ["Absent", "Right upper lobe", "Left upper lobe", "Bilateral upper lobes", "Cavitation present"]
+              }
+            ]
+          },
+          {
+            "group_name": "Diffuse / interstitial pattern",
+            "items": [
+              {
+                "item_id": "B_2_0",
+                "item_text": "Interstitial pattern",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Reticular", "Nodular", "Reticulonodular", "Ground glass", "Honeycombing"]
+              }
+            ]
+          },
+          {
+            "group_name": "Collapse / atelectasis",
+            "items": [
+              {
+                "item_id": "B_3_0",
+                "item_text": "Collapse / atelectasis",
+                "type": "multi_select",
+                "required": true,
+                "options": ["Absent", "Right upper lobe", "Right middle lobe", "Right lower lobe", "Left upper lobe", "Lingula", "Left lower lobe", "Subsegmental / plate-like — right", "Subsegmental / plate-like — left", "Bilateral subsegmental"]
+              }
+            ]
+          },
+          {
+            "group_name": "Pleural",
+            "items": [
+              {
+                "item_id": "B_4_0",
+                "item_text": "Pleural effusion",
+                "type": "single_select",
+                "required": true,
+                "options": ["None", "Right — small", "Right — moderate", "Right — large", "Left — small", "Left — moderate", "Left — large", "Bilateral", "Loculated", "Uncertain"]
+              },
+              {
+                "item_id": "B_4_1",
+                "item_text": "Pneumothorax",
+                "type": "single_select",
+                "required": true,
+                "options": ["None", "Right", "Left", "Bilateral", "Tension features suspected", "Uncertain"]
+              },
+              {
+                "item_id": "B_4_2",
+                "item_text": "Pleural thickening",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Right", "Left", "Bilateral"]
+              }
+            ]
+          },
+          {
+            "group_name": "Nodule / mass",
+            "items": [
+              {
+                "item_id": "B_5_0",
+                "item_text": "Focal nodule or mass",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Solitary — smooth", "Solitary — spiculated", "Multiple nodules", "Calcified — popcorn", "Calcified — other pattern"]
+              }
+            ]
+          },
+          {
+            "group_name": "Apical review",
+            "items": [
+              {
+                "item_id": "B_6_0",
+                "item_text": "Right apex",
+                "type": "single_select",
+                "required": true,
+                "options": ["Clear", "Opacity / mass", "Pleural thickening", "Pleural line visible (PTX)", "Difficult to assess"]
+              },
+              {
+                "item_id": "B_6_1",
+                "item_text": "Left apex",
+                "type": "single_select",
+                "required": true,
+                "options": ["Clear", "Opacity / mass", "Pleural thickening", "Pleural line visible (PTX)", "Difficult to assess"]
+              }
+            ]
+          },
+          {
+            "group_name": "Hidden zones",
+            "items": [
+              {
+                "item_id": "B_7_0",
+                "item_text": "Retrocardiac region",
+                "type": "single_select",
+                "required": true,
+                "options": ["Clear", "Opacity present", "Difficult to assess"]
+              },
+              {
+                "item_id": "B_7_1",
+                "item_text": "Retrodiaphragmatic region",
+                "type": "single_select",
+                "required": true,
+                "options": ["Clear", "Opacity present", "Difficult to assess"]
+              }
+            ]
+          }
+        ]
+      },
+
+      "C": {
+        "section_id": "C",
+        "section_label": "Cardiomediastinal / Circulation",
+        "section_note_placeholder": "Optional notes for Cardiomediastinal / Circulation",
+        "groups": [
+          {
+            "group_name": "Cardiac size",
+            "items": [
+              {
+                "item_id": "C_0_0",
+                "item_text": "Cardiothoracic index (CTI)",
+                "type": "single_select",
+                "required": true,
+                "options": ["≤0.5 (normal)", "≥0.5 (enlarged)", "Difficult to assess — AP projection"],
+                "conditional": {
+                  "trigger_option": "≥0.5 (enlarged)",
+                  "reveals": {
+                    "item_id": "C_0_0_desc",
+                    "item_text": "Describe cardiomegaly",
+                    "type": "describe",
+                    "required": true,
+                    "placeholder": "Describe degree and likely chamber(s) involved"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "group_name": "Cardiac silhouette",
+            "items": [
+              {
+                "item_id": "C_1_0",
+                "item_text": "Cardiac silhouette",
+                "type": "single_select",
+                "required": true,
+                "options": ["Normal contour", "Right heart border abnormality", "Left heart border abnormality", "Boot-shaped (RVH)", "Globular (pericardial effusion suspected)", "Post-operative"]
+              }
+            ]
+          },
+          {
+            "group_name": "Mediastinal contours",
+            "items": [
+              {
+                "item_id": "C_2_0",
+                "item_text": "Superior mediastinum",
+                "type": "single_select",
+                "required": true,
+                "options": ["Normal", "Widened — right", "Widened — left", "Widened — bilateral", "Mass suspected"]
+              },
+              {
+                "item_id": "C_2_1",
+                "item_text": "Aortic contour",
+                "type": "describe",
+                "required": true,
+                "placeholder": "Describe — e.g. normal, tortuous, dilated ascending, dilated descending, calcified knob"
+              }
+            ]
+          },
+          {
+            "group_name": "Pulmonary vascularity",
+            "items": [
+              {
+                "item_id": "C_3_0",
+                "item_text": "Pulmonary vascularity",
+                "type": "single_select",
+                "required": true,
+                "options": ["Normal", "Cephalization present", "Enlarged central PAs with peripheral pruning", "Bilateral PA enlargement without pruning", "Regional oligaemia", "Plethora"]
+              }
+            ]
+          },
+          {
+            "group_name": "Oedema / congestion",
+            "items": [
+              {
+                "item_id": "C_4_0",
+                "item_text": "Pulmonary oedema / congestion pattern",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Vascular redistribution only", "Interstitial oedema", "Alveolar oedema", "Unilateral oedema"]
+              }
+            ]
+          }
+        ]
+      },
+
+      "D": {
+        "section_id": "D",
+        "section_label": "Diaphragm",
+        "section_note_placeholder": "Optional notes for Diaphragm",
+        "groups": [
+          {
+            "group_name": "Hemidiaphragm position",
+            "items": [
+              {
+                "item_id": "D_0_0",
+                "item_text": "Right hemidiaphragm relative to left",
+                "type": "single_select",
+                "required": true,
+                "options": [
+                  "RT higher than LT — normal (>1.5 cm)",
+                  "RT higher than LT — borderline (≤1.5 cm)",
+                  "RT excessively elevated",
+                  "LT elevated above RT"
+                ]
+              },
+              {
+                "item_id": "D_0_1",
+                "item_text": "Diaphragm flattening",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Present — bilateral", "Present — right", "Present — left"]
+              }
+            ]
+          },
+          {
+            "group_name": "Costophrenic & cardiophrenic angles",
+            "items": [
+              {
+                "item_id": "D_1_0",
+                "item_text": "Right costophrenic angle",
+                "type": "describe",
+                "required": true,
+                "placeholder": "Describe — e.g. sharp, blunted (small/moderate/large), loculated"
+              },
+              {
+                "item_id": "D_1_1",
+                "item_text": "Left costophrenic angle",
+                "type": "describe",
+                "required": true,
+                "placeholder": "Describe — e.g. sharp, blunted (small/moderate/large), loculated"
+              },
+              {
+                "item_id": "D_1_2",
+                "item_text": "Right cardiophrenic angle",
+                "type": "single_select",
+                "required": true,
+                "options": ["Clear", "Blunted / effusion", "Fat pad", "Mass"]
+              },
+              {
+                "item_id": "D_1_3",
+                "item_text": "Left cardiophrenic angle",
+                "type": "single_select",
+                "required": true,
+                "options": ["Clear", "Blunted / effusion", "Fat pad", "Mass"]
+              }
+            ]
+          },
+          {
+            "group_name": "Sub-diaphragmatic",
+            "items": [
+              {
+                "item_id": "D_2_0",
+                "item_text": "Free air under diaphragm",
+                "type": "multi_select",
+                "required": true,
+                "options": ["No air under diaphragm", "Under right hemidiaphragm", "Under left hemidiaphragm", "Bilateral"]
+              },
+              {
+                "item_id": "D_2_1",
+                "item_text": "Gastric bubble",
+                "type": "describe",
+                "required": true,
+                "placeholder": "Describe position and appearance"
+              },
+              {
+                "item_id": "D_2_2",
+                "item_text": "Upper abdominal gas pattern",
+                "type": "single_select",
+                "required": true,
+                "options": ["Normal", "Abnormal — describe in section note", "Difficult to assess"]
+              },
+              {
+                "item_id": "D_2_3",
+                "item_text": "Hiatal hernia",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Present — small", "Present — large", "Uncertain"]
+              }
+            ]
+          }
+        ]
+      },
+
+      "E": {
+        "section_id": "E",
+        "section_label": "Everything Else — Bones & Soft Tissues",
+        "section_note_placeholder": "Optional notes for Bones & Soft Tissues",
+        "groups": [
+          {
+            "group_name": "Ribs",
+            "items": [
+              {
+                "item_id": "E_0_0",
+                "item_text": "Ribs 1–3",
+                "type": "describe",
+                "required": true,
+                "placeholder": "Describe findings or state intact"
+              },
+              {
+                "item_id": "E_0_1",
+                "item_text": "Ribs 4–9",
+                "type": "describe",
+                "required": true,
+                "placeholder": "Describe findings or state intact"
+              },
+              {
+                "item_id": "E_0_2",
+                "item_text": "Ribs 10–12",
+                "type": "describe",
+                "required": true,
+                "placeholder": "Describe findings or state intact"
+              }
+            ]
+          },
+          {
+            "group_name": "Bones",
+            "items": [
+              {
+                "item_id": "E_1_0",
+                "item_text": "Clavicles",
+                "type": "describe",
+                "required": true,
+                "placeholder": "Describe findings or state intact"
+              },
+              {
+                "item_id": "E_1_1",
+                "item_text": "Scapulae",
+                "type": "describe",
+                "required": true,
+                "placeholder": "Describe findings or state intact"
+              },
+              {
+                "item_id": "E_1_2",
+                "item_text": "Humeral heads",
+                "type": "describe",
+                "required": true,
+                "placeholder": "Describe findings or state intact"
+              },
+              {
+                "item_id": "E_1_3",
+                "item_text": "Vertebrae (visible)",
+                "type": "single_select",
+                "required": true,
+                "options": ["Unremarkable", "Lytic lesion", "Sclerotic lesion", "Compression / wedging", "Scoliosis noted"]
+              }
+            ]
+          },
+          {
+            "group_name": "Soft tissues",
+            "items": [
+              {
+                "item_id": "E_2_0",
+                "item_text": "Subcutaneous emphysema",
+                "type": "describe",
+                "required": true,
+                "placeholder": "Describe location and extent, or state absent"
+              },
+              {
+                "item_id": "E_2_1",
+                "item_text": "Chest wall abnormality",
+                "type": "single_select",
+                "required": true,
+                "options": ["None", "Soft tissue swelling", "Mass", "Post-surgical change", "Pectus deformity"]
+              },
+              {
+                "item_id": "E_2_2",
+                "item_text": "Right breast shadow",
+                "type": "single_select",
+                "required": true,
+                "options": ["Present", "Absent"]
+              },
+              {
+                "item_id": "E_2_3",
+                "item_text": "Left breast shadow",
+                "type": "single_select",
+                "required": true,
+                "options": ["Present", "Absent"]
+              }
+            ]
+          },
+          {
+            "group_name": "Extrathoracic",
+            "items": [
+              {
+                "item_id": "E_3_0",
+                "item_text": "Neck soft tissues",
+                "type": "describe",
+                "required": true,
+                "placeholder": "Describe — e.g. unremarkable, swelling, subcutaneous emphysema"
+              },
+              {
+                "item_id": "E_3_1",
+                "item_text": "Visible upper abdomen",
+                "type": "describe",
+                "required": true,
+                "placeholder": "Describe — e.g. unremarkable, hepatomegaly, abnormal gas pattern"
+              },
+              {
+                "item_id": "E_3_2",
+                "item_text": "Shoulder joints",
+                "type": "describe",
+                "required": true,
+                "placeholder": "Describe — e.g. unremarkable, right/left abnormality"
+              }
+            ]
+          }
+        ]
+      },
+
+      "DEV": {
+        "section_id": "DEV",
+        "section_label": "Devices / Foreign Material",
+        "section_note_placeholder": "Optional notes for Devices",
+        "groups": [
+          {
+            "group_name": "Airway & gastric",
+            "items": [
+              {
+                "item_id": "DEV_0_0",
+                "item_text": "ETT",
+                "type": "single_select",
+                "required": false,
+                "placeholder": "Complete only if ETT is present",
+                "options": ["Not present", "Tip 3–5 cm above carina (optimal)", "Too high (>5 cm above carina)", "Too low (<3 cm above carina)", "Right mainstem bronchus", "Left mainstem bronchus"]
+              },
+              {
+                "item_id": "DEV_0_1",
+                "item_text": "NG/OG tube",
+                "type": "single_select",
+                "required": false,
+                "placeholder": "Complete only if NG/OG tube is present",
+                "options": ["Not present", "Tip below diaphragm (optimal)", "Coiled in pharynx / oesophagus", "In airway / lung", "Tip above diaphragm", "Tip in oesophagus"]
+              }
+            ]
+          },
+          {
+            "group_name": "Vascular access",
+            "items": [
+              {
+                "item_id": "DEV_1_0",
+                "item_text": "CVC / PICC tip position",
+                "type": "single_select",
+                "required": false,
+                "placeholder": "Complete only if CVC/PICC is present",
+                "options": ["Not present", "Distal SVC (optimal)", "Tip too high (above SVC)", "Tip in right atrium", "Tip abutting RA wall", "Tip in right ventricle", "Malpositioned — left-sided"]
+              }
+            ]
+          },
+          {
+            "group_name": "Pleural",
+            "items": [
+              {
+                "item_id": "DEV_2_0",
+                "item_text": "Chest drain",
+                "type": "single_select",
+                "required": false,
+                "placeholder": "Complete only if chest drain is present",
+                "options": ["Not present", "All side holes within pleural space (optimal)", "Side hole crossing chest wall", "Drain kinked", "Malpositioned in fissure", "Drain too deep"]
+              }
+            ]
+          },
+          {
+            "group_name": "Cardiac & vascular",
+            "items": [
+              {
+                "item_id": "DEV_3_0",
+                "item_text": "Swan-Ganz catheter",
+                "type": "single_select",
+                "required": false,
+                "placeholder": "Complete only if Swan-Ganz is present",
+                "options": ["Not present", "Interlobar PA (optimal)", "Wedged / peripheral position", "Too proximal (main PA)", "Coiled in right ventricle"]
+              },
+              {
+                "item_id": "DEV_3_1",
+                "item_text": "Pacemaker / ICD",
+                "type": "single_select",
+                "required": false,
+                "placeholder": "Complete only if device is present",
+                "options": ["Not present", "Leads correctly positioned", "RV lead displaced", "RA lead displaced", "CS lead absent / displaced", "Lead fracture or kink"]
+              },
+              {
+                "item_id": "DEV_3_2",
+                "item_text": "IABP",
+                "type": "single_select",
+                "required": false,
+                "placeholder": "Complete only if IABP is present",
+                "options": ["Not present", "Tip at aortic knob level (optimal)", "Too high (above aortic knob)", "Too low"]
+              }
+            ]
+          },
+          {
+            "group_name": "Surgical hardware",
+            "items": [
+              {
+                "item_id": "DEV_4_0",
+                "item_text": "Sternotomy wires",
+                "type": "single_select",
+                "required": false,
+                "placeholder": "Complete only if present",
+                "options": ["Not present", "Intact", "Wire fracture", "Wire dehiscence", "Incomplete wire count"]
+              },
+              {
+                "item_id": "DEV_4_1",
+                "item_text": "Valves / clips / staples",
+                "type": "single_select",
+                "required": false,
+                "placeholder": "Complete only if present",
+                "options": ["Not present", "As expected", "Valve prosthesis abnormal", "Clip or staple abnormality"]
+              },
+              {
+                "item_id": "DEV_4_2",
+                "item_text": "Other device / foreign material",
+                "type": "describe",
+                "required": false,
+                "placeholder": "Describe any other device or foreign material not listed above"
+              }
+            ]
+          }
+        ]
+      },
+
+      "2H": {
+        "section_id": "2H",
+        "section_label": "2Hs Safety Review",
+        "section_note_placeholder": "Optional notes for 2Hs Safety Review",
+        "gate": {
+          "type": "confirmation",
+          "confirmation_item": {
+            "item_id": "2H_CONFIRM",
+            "item_text": "I have actively re-checked both hemithoraces and hila",
+            "type": "single_select",
+            "required": true,
+            "options": ["Confirmed"],
+            "note": "This confirmation is required before the report can be submitted."
+          }
+        },
+        "groups": [
+          {
+            "group_name": "Hemithoraces",
+            "items": [
+              {
+                "item_id": "2H_0_0",
+                "item_text": "Right hemithorax — volume",
+                "type": "single_select",
+                "required": true,
+                "options": ["Normal", "Reduced", "Increased", "Difficult to assess"]
+              },
+              {
+                "item_id": "2H_0_1",
+                "item_text": "Left hemithorax — volume",
+                "type": "single_select",
+                "required": true,
+                "options": ["Normal", "Reduced", "Increased", "Difficult to assess"]
+              },
+              {
+                "item_id": "2H_0_2",
+                "item_text": "Hemithorax translucency comparison",
+                "type": "single_select",
+                "required": true,
+                "options": ["Symmetric", "Right more translucent", "Left more translucent", "Uncertain"]
+              },
+              {
+                "item_id": "2H_0_3",
+                "item_text": "Pleural line check",
+                "type": "single_select",
+                "required": true,
+                "options": ["No pleural line visible", "Right pleural line present", "Left pleural line present", "Bilateral"]
+              },
+              {
+                "item_id": "2H_0_4",
+                "item_text": "Hidden edge-zone abnormality",
+                "type": "single_select",
+                "required": true,
+                "options": ["None identified", "Right edge-zone finding", "Left edge-zone finding", "Bilateral"]
+              }
+            ]
+          },
+          {
+            "group_name": "Hila",
+            "items": [
+              {
+                "item_id": "2H_1_0",
+                "item_text": "Hilar size comparison",
+                "type": "single_select",
+                "required": true,
+                "options": ["Symmetric", "Right enlarged", "Left enlarged", "Bilateral enlargement", "Bilateral reduced"]
+              },
+              {
+                "item_id": "2H_1_1",
+                "item_text": "Hilar density",
+                "type": "single_select",
+                "required": true,
+                "options": ["Normal", "Increased — right", "Increased — left", "Increased — bilateral", "Calcified — right", "Calcified — left", "Calcified — bilateral"]
+              },
+              {
+                "item_id": "2H_1_2",
+                "item_text": "Hilar height — left relative to right",
+                "type": "single_select",
+                "required": true,
+                "options": ["At or above right (normal)", "Lower than right"]
+              },
+              {
+                "item_id": "2H_1_3",
+                "item_text": "Hilar contour",
+                "type": "single_select",
+                "required": true,
+                "options": ["Normal — lobular / vascular", "Lobulated / irregular — right", "Lobulated / irregular — left", "Lobulated / irregular — bilateral", "Mass obscuring hilum"]
+              },
+              {
+                "item_id": "2H_1_4",
+                "item_text": "Hilar assessment — full description",
+                "type": "describe",
+                "required": true,
+                "placeholder": "Describe size, symmetry, density, contour — e.g. symmetric and unremarkable, vs enlarged lobulated right hilum"
+              },
+              {
+                "item_id": "2H_1_5",
+                "item_text": "Pseudo-hilar enlargement",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Tortuous aorta mimicking left hilum", "Dilated left PA", "Uncertain"]
+              }
+            ]
+          },
+          {
+            "group_name": "Focal hyperlucency",
+            "items": [
+              {
+                "item_id": "2H_2_0",
+                "item_text": "Lung markings",
+                "type": "single_select",
+                "required": true,
+                "options": ["Present bilaterally to periphery", "Right hyperlucency", "Left hyperlucency", "Bilateral hyperlucency"]
+              },
+              {
+                "item_id": "2H_2_1",
+                "item_text": "Regional vascular attenuation",
+                "type": "multi_select",
+                "required": true,
+                "options": ["Absent", "Right upper zone", "Right lower zone", "Left upper zone", "Left lower zone"]
+              },
+              {
+                "item_id": "2H_2_2",
+                "item_text": "Focal bulla or bleb",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Right", "Left", "Bilateral"]
+              },
+              {
+                "item_id": "2H_2_3",
+                "item_text": "Compensatory overinflation",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Right overinflated", "Left overinflated"]
+              }
+            ]
+          },
+          {
+            "group_name": "Diffuse hyperlucency",
+            "items": [
+              {
+                "item_id": "2H_3_0",
+                "item_text": "Diaphragm contour",
+                "type": "single_select",
+                "required": true,
+                "options": ["Rounded (normal)", "Bilateral flattening", "Barrel chest appearance"]
+              },
+              {
+                "item_id": "2H_3_1",
+                "item_text": "Bronchial wall thickening",
+                "type": "single_select",
+                "required": true,
+                "options": ["Absent", "Present"]
+              }
+            ]
+          }
+        ]
+      },
+
+      "HG": {
+        "section_id": "HG",
+        "section_label": "Hilar Enlargement Gate",
+        "section_note_placeholder": "Optional notes for Hilar Enlargement Gate",
+        "gate": {
+          "type": "conditional",
+          "trigger_section": "2H",
+          "trigger_item_ids": ["2H_1_0"],
+          "trigger_options": ["Right enlarged", "Left enlarged", "Bilateral enlargement"],
+          "note": "This section is only shown if hilar enlargement was identified in the 2Hs review."
+        },
+        "groups": [
+          {
+            "group_name": "Hilar enlargement pattern",
+            "items": [
+              {
+                "item_id": "HG_0_0",
+                "item_text": "Hilar enlargement pattern",
+                "type": "multi_select",
+                "required": true,
+                "placeholder": "Complete only if hilar enlargement was noted in 2H",
+                "options": [
+                  "Bilateral symmetric lobulated",
+                  "Bilateral with paratracheal widening (lambda / 1-2-3)",
+                  "Bilateral with parenchymal calcifications",
+                  "Unilateral right",
+                  "Unilateral left"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+
+    }
+  }
+}

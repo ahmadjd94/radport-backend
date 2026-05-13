@@ -1,0 +1,14 @@
+{
+  "PostgreSQL": {
+    "EnableIndex":   true,
+    "EnableStorage": true,
+    "Host":     "localhost",
+    "Port":     5432,
+    "Database": "orthanc",
+    "Username": "orthanc",
+    "Password": "OXe$r123R$53uhjgfK&8",
+    "EnableSsl": false,
+    "Lock":      false,
+    "IndexConnectionsCount": 5
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "Name": "RadPort-Orthanc",
+  "StorageDirectory": "/var/lib/orthanc/db",
+  "IndexDirectory": "/var/lib/orthanc/db",
+  "TemporaryDirectory": "/var/lib/orthanc/tmp",
+
+  "HttpServerEnabled": true,
+  "HttpPort": 8042,
+  "HttpDescribeErrors": false,
+
+  "DicomServerEnabled": true,
+  "DicomAet": "RADPORT",
+  "DicomPort": 4242,
+  "DicomCheckCalledAet": true,
+  "DicomAlwaysAllowEcho": true,
+  "DicomAlwaysAllowStore": false,
+  "DicomAlwaysAllowFind": false,
+  "DicomAlwaysAllowGet": false,
+  "DicomAlwaysAllowMove": false,
+
+  "RemoteAccessAllowed": true,
+  "AuthenticationEnabled": true,
+  "RegisteredUsers": {
+    "radport-app": "F23RadpOrt@!#51",
+    "admin":       "DSAJ3MgtTREasdC#Na"
+  },
+
+  "DefaultEncoding": "Latin1",
+  "DeflateAlways": true,
+  "ConcurrentJobs": 2,
+  "MaximumStorageSize": 0,
+  "MaximumPatientCount": 0,
+
+  "DicomModalities": {
+    "scanner1": ["MODALITY_AET", "192.168.1.50", 104]
+  }
+}
