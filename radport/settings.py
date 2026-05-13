@@ -18,7 +18,7 @@ from dotenv import load_dotenv
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 load_dotenv(BASE_DIR / '.env')
-PACS_PRIVATE_URL = "http://127.0.0.1:8042"  # loopback, no TLS overhead
+# PACS_PRIVATE_URL = "http://127.0.0.1:8042"  # loopback, no TLS overhead
 PACS_USER = "radport-app"
 PACS_PASSWORD = "F23RadpOrt@!#51"
 PACS_TIMEOUT = (5, 600)  # (connect, read) — read is long for big DICOM files
