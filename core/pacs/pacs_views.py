@@ -16,7 +16,7 @@ CHUNK_SIZE = 64 * 1024
 @authentication_classes([JWTAuthentication])  # Explicitly use JWT authentication
 @permission_classes([IsAuthenticated])  # Enforce authentication
 def pacs_proxy(request, path):
-    print(request.user)
+
     # Reconstruct headers from Django's META
     incoming_headers = {}
     for key, value in request.META.items():
@@ -28,7 +28,10 @@ def pacs_proxy(request, path):
             incoming_headers[header_name] = value
 
     # Forward
+    incoming_headers.pop("Authorization")
+    print("incoming_headers")
     print(incoming_headers)
+    print(path)
     upstream = pacs_client.proxy(
         method=request.method,
         path=path,
