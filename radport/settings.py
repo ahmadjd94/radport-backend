@@ -32,7 +32,7 @@ SECRET_KEY = 'django-insecure-*othplrf^@z$5z)1c26fjcaogymoo06d$^1a$g8(y$ar7kvs^+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["backend.radport.net"]
 
 # Application definition
 
