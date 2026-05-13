@@ -32,7 +32,7 @@ SECRET_KEY = 'django-insecure-*othplrf^@z$5z)1c26fjcaogymoo06d$^1a$g8(y$ar7kvs^+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["backend.radport.net"]
+ALLOWED_HOSTS = ["backend.radport.net", "127.0.0.1"]
 
 # Application definition
 
@@ -62,10 +62,10 @@ REST_FRAMEWORK = {
 
 # Optional but highly recommended: Configure token lifetimes
 SIMPLE_JWT = {
-        'ACCESS_TOKEN_LIFETIME': timedelta(minutes=15),  # Short-lived access token
-        'REFRESH_TOKEN_LIFETIME': timedelta(days=1),     # Long-lived refresh token
-    'ROTATE_REFRESH_TOKENS': True,                   # Get a new refresh token on each refresh
-    'BLACKLIST_AFTER_ROTATION': True,                # Prevent old refresh tokens from being reused
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=15),  # Short-lived access token
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),  # Long-lived refresh token
+    'ROTATE_REFRESH_TOKENS': True,  # Get a new refresh token on each refresh
+    'BLACKLIST_AFTER_ROTATION': True,  # Prevent old refresh tokens from being reused
     'AUTH_HEADER_TYPES': ('Bearer',),
 }
 
@@ -73,17 +73,20 @@ CORS_ALLOW_CREDENTIALS = True
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
+    "https://backend.radport.net",
+    "https://app.radport.net"
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5173",
+    "https://backend.radport.net",
+    "https://app.radport.net"
 ]
 
 SESSION_COOKIE_SAMESITE = "None"
-SESSION_COOKIE_SECURE   = True
-CSRF_COOKIE_SAMESITE    = "None"
-CSRF_COOKIE_SECURE      = True
-
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SAMESITE = "None"
+CSRF_COOKIE_SECURE = True
 
 MIDDLEWARE = [
 
