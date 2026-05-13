@@ -28,6 +28,7 @@ def pacs_proxy(request, path):
             incoming_headers[header_name] = value
 
     # Forward
+    print(incoming_headers)
     upstream = pacs_client.proxy(
         method=request.method,
         path=path,

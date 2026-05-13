@@ -41,15 +41,16 @@ class PACSClient:
         if query_string:
             url = f"{url}?{query_string.decode('latin-1') if isinstance(query_string, bytes) else query_string}"
 
-        upstream_headers = {
-            k: v for k, v in (headers or {}).items()
-            if k.lower() not in HOP_BY_HOP
-        }
-
+        # upstream_headers = {
+        #     k: v for k, v in (headers or {}).items()
+        #     if k.lower() not in HOP_BY_HOP
+        # }
+        # print("upstream_headers")
+        # print(upstream_headers)
         return self.session.request(
             method=method,
             url=url,
-            headers=upstream_headers,
+            headers=headers,
             data=body,
             stream=True,             # don't buffer response body
             timeout=self.TIMEOUT,
