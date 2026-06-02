@@ -1,9 +1,11 @@
-from rest_framework import status
 from rest_framework.decorators import api_view
-from rest_framework.response import Response
 
-from core.models import Flow, StudyReport
-from core.serializers import FlowSerializer, StudyReportSerializer
+from rest_framework import viewsets
+from rest_framework.decorators import action
+from rest_framework.status import HTTP_404_NOT_FOUND
+from .models import StudyReport, Flow
+from .serializers import EnrichedChecklistSerializer, StudyReportSerializer, FlowSerializer
+
 
 
 @api_view(http_method_names=["GET"])
@@ -74,14 +76,6 @@ class StudyReportByStudyView(generics.ListAPIView):
         return StudyReport.objects.filter(
             study_uid=self.kwargs["study_uid"]
         ).select_related("flow", "submitted_by")
-
-
-from rest_framework import viewsets
-from rest_framework.response import Response
-from rest_framework.decorators import action
-from rest_framework.status import HTTP_404_NOT_FOUND
-from .models import StudyReport
-from .serializers import EnrichedChecklistSerializer
 
 
 class StudyReportViewSet(viewsets.ModelViewSet):
