@@ -81,7 +81,8 @@ class StudyReport(models.Model):
             "Each item contains: item_id, status (normal|finding|not_reviewed), "
             "selected_options[], free_text. Each section may contain a section_note."
         ),
-        default={}
+        default={},
+        null=True
     )
     # summary_impression = models.TextField(
     #     blank=True,
