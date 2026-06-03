@@ -15,9 +15,12 @@ def merge_flow_with_report(flow_obj, study_report_obj):
     """
     enriched = deepcopy(flow_obj.structure)
     answers = study_report_obj.report_data
-
-    selections = answers.get('selections', {})
-    descriptions = answers.get('descriptions', {})
+    if answers:
+        selections = answers['selections']
+        descriptions = answers['descriptions']
+    else:
+        selections = {}
+        descriptions = {}
 
     # Traverse sections → groups → items
     for section_id, section in enriched.get('sections', {}).items():
