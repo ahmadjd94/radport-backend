@@ -1,4 +1,5 @@
 # serializers.py
+from django.utils import timezone
 from rest_framework import serializers
 from ..models import  StudyReport
 
@@ -7,6 +8,9 @@ from ..models import  StudyReport
 class StudyReportSerializer(serializers.ModelSerializer):
 
     submitted_by = serializers.HiddenField(
+        default=serializers.CurrentUserDefault(),
+    )
+    created_by = serializers.HiddenField(
         default=serializers.CurrentUserDefault(),
     )
     flow_type = serializers.CharField(
@@ -18,6 +22,8 @@ class StudyReportSerializer(serializers.ModelSerializer):
         read_only=True,
     )
 
+    status = serializers.ChoiceField(StudyReport.Status, default=StudyReport.Status.DRAFT)
+
     class Meta:
         model = StudyReport
         fields = [
@@ -26,9 +32,11 @@ class StudyReportSerializer(serializers.ModelSerializer):
             "flow_type",
             "flow_version",
             "study_uid",
+            "status",
             "submitted_by",
-
+            "created_by",
             "report_data",
+            "report_document_md",
             "submitted_at",
             "created_at",
             "updated_at",
@@ -57,17 +65,17 @@ class StudyReportSerializer(serializers.ModelSerializer):
         """
         status = attrs.get("status", self.instance.status if self.instance else None)
 
-        # if status == StudyReport.Status.SUBMITTED:
-        #     flow = attrs.get("flow", self.instance.flow if self.instance else None)
-        #     report_data = attrs.get("report_data", {})
-        #
-        #     if flow:
-        #         required_ids = self._get_required_item_ids(flow.structure)
-        #         missing = self._find_incomplete_required(report_data, required_ids)
-        #         if missing:
-        #             raise serializers.ValidationError({
-        #                 "report_data": f"The following required items are not reviewed: {missing}"
-        #             })
+        if status == StudyReport.Status.SUBMITTED:
+            flow = attrs.get("flow", self.instance.flow if self.instance else None)
+            report_data = attrs.get("report_data", {})
+
+            if flow:
+                required_ids = self._get_required_item_ids(flow.structure)
+                missing = self._find_incomplete_required(report_data, required_ids)
+                if missing:
+                    raise serializers.ValidationError({
+                        "report_data": f"The following required items are not reviewed: {missing}"
+                    })
 
         return attrs
 
@@ -90,11 +98,11 @@ class StudyReportSerializer(serializers.ModelSerializer):
                         missing.append(iid)
         return missing
 
-    # def update(self, instance, validated_data):
-    #     # Stamp submitted_at when status transitions to submitted
-    #     if (
-    #         validated_data.get("status") == FlowReport.Status.SUBMITTED
-    #         and instance.status != FlowReport.Status.SUBMITTED
-    #     ):
-    #         validated_data["submitted_at"] = timezone.now()
-    #     return super().update(instance, validated_data)
+    def update(self, instance, validated_data):
+        # Stamp submitted_at when status transitions to submitted
+        if (
+            validated_data.get("status") == StudyReport.Status.SUBMITTED
+            and instance.status != StudyReport.Status.SUBMITTED
+        ):
+            validated_data["submitted_at"] = timezone.now()
+        return super().update(instance, validated_data)

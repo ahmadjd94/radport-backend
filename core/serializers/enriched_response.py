@@ -11,6 +11,7 @@ class EnrichedChecklistSerializer(serializers.Serializer):
     flow_type = serializers.CharField(source='flow.flow_type')
     flow_label = serializers.CharField(source='flow.label')
     flow_version = serializers.IntegerField(source='flow.version')
+    llm_md_report = serializers.CharField(source='report_document_md')
 
     structure = serializers.SerializerMethodField()
     metadata = serializers.SerializerMethodField()

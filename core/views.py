@@ -1,4 +1,4 @@
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes
 
 from rest_framework import viewsets
 from rest_framework.decorators import action
@@ -6,6 +6,9 @@ from rest_framework.status import HTTP_404_NOT_FOUND
 from .models import StudyReport, Flow
 from .serializers import EnrichedChecklistSerializer, StudyReportSerializer, FlowSerializer
 
+from rest_framework import generics, permissions, status
+from rest_framework.response import Response
+from drf_spectacular.utils import extend_schema
 
 
 @api_view(http_method_names=["GET"])
@@ -27,20 +30,38 @@ def create_flow(request):
 
 # views.py
 
-from rest_framework import generics, permissions, status
-from rest_framework.exceptions import PermissionDenied
-from rest_framework.response import Response
-from django.shortcuts import get_object_or_404
-
-
-class StudyReportCreateView(generics.CreateAPIView):
+@extend_schema(
+    request=StudyReportSerializer,
+    responses={201: StudyReportSerializer},
+    description="Creates a new report (draft or submitted) tied to a study_uid. Frontend posts the full completed checklist here.",
+    # You can also add tags to group endpoints in Swagger UI
+    tags=['Reports']
+)
+@api_view(['PATCH'])
+@permission_classes([permissions.IsAuthenticated])
+def study_report_create_view(request, study_uid, *args, **kwargs):
     """
     POST /api/reports/
     Creates a new report (draft or submitted) tied to a study_uid.
     Frontend posts the full completed checklist here.
     """
-    serializer_class = StudyReportSerializer
-    permission_classes = [permissions.IsAuthenticated]
+
+    print(args, kwargs)
+    print(study_uid)
+    # Inject the user ID into the request data just like the class-based view
+    # request.data["created_by_id"] = request.user.id
+    instance = StudyReport.objects.filter(study_uid=study_uid, submitted_by=request.user).first()
+    if instance:
+
+        serializer = StudyReportSerializer(instance=instance, data=request.data, context={'request': request})
+    else:
+        serializer = StudyReportSerializer(data=request.data, context={'request': request})
+
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 class FlowReportDetailView(generics.RetrieveUpdateAPIView):
@@ -82,7 +103,7 @@ class StudyReportViewSet(viewsets.ModelViewSet):
     queryset = StudyReport.objects.select_related('flow')
 
     @action(detail=False, methods=['get'])
-    def get_checklist_with_answers(self, request,study_uid):
+    def get_checklist_with_answers(self, request, study_uid):
         """
         GET /api/reports/get_checklist_with_answers/?study_uid=<uid>
 
@@ -97,7 +118,7 @@ class StudyReportViewSet(viewsets.ModelViewSet):
 
         try:
             report = StudyReport.objects.select_related('flow').get(
-                study_uid=study_uid
+                study_uid=study_uid, submitted_by=request.user
             )
         except StudyReport.DoesNotExist:
             return Response(

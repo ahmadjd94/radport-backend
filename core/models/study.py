@@ -12,9 +12,9 @@ User = get_user_model()
 
 class StudyReport(models.Model):
 
-    # class Status(models.TextChoices):
-    #     DRAFT     = "draft",     "Draft"
-    #     SUBMITTED = "submitted", "Submitted"
+    class Status(models.TextChoices):
+        DRAFT     = "draft",     "Draft"
+        SUBMITTED = "submitted", "Submitted"
 
     id = models.UUIDField(
         primary_key=True,
@@ -33,11 +33,11 @@ class StudyReport(models.Model):
         help_text="DICOM Study Instance UID — links this report to the study in Orthanc.",
     )
 
-    # status = models.CharField(
-    #     max_length=16,
-    #     choices=Status.choices,
-    #     default=Status.DRAFT,
-    # )
+    status = models.CharField(
+        max_length=16,
+        choices=Status.choices,
+        default=Status.DRAFT,
+    )
     # projection = models.CharField(
     #     max_length=16,
     #     choices=[
@@ -85,6 +85,13 @@ class StudyReport(models.Model):
         null=True,
         blank=True
     )
+    report_document_md = models.CharField(
+        help_text=(
+            "Complete report returned from LLM"
+        ),
+        null=True,
+        blank=True
+    )
     # summary_impression = models.TextField(
     #     blank=True,
     #     default="",
@@ -100,6 +107,8 @@ class StudyReport(models.Model):
 
     created_by = models.ForeignKey(
         User,
+        null=True,
+        blank=True,
         on_delete=models.PROTECT,
         related_name="created_reports",
         help_text="User who created this report (tracks drafts too)."
