@@ -85,7 +85,7 @@ class StudyReport(models.Model):
         null=True,
         blank=True
     )
-    report_document_md = models.CharField(
+    report_document_md = models.TextField(
         help_text=(
             "Complete report returned from LLM"
         ),
